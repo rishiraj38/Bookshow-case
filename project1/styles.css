@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: antiquewhite;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #355070;
+    color: antiquewhite;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+header p {
+    font-size: 18px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.book-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.book-item {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: zoomIn 2s ease;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.book-item:hover img {
+    transform: scale(1.1);
+}
+
+.book-info {
+    text-align: center;
+    margin-top : 15px;
+    margin-bottom: 10px;
+}
+
+.book-info h2 {
+    font-size: 20px;
+    margin: auto;
+    margin-left: -15px;
+    color: #3b5998;
+}
+
+.book-info p {
+    font-size: 16px;
+    color: #777;
+    
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.book-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3b5998;
+    color: white;
+    margin-top: 50px;
+}
