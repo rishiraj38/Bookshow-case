@@ -12,27 +12,27 @@ body {
 
 header {
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
     background-color: #355070;
     color: antiquewhite;
 }
 
 header h1 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 10px;
     animation: fadeInDown 2s ease-in-out;
 }
 
 header p {
-    font-size: 18px;
+    font-size: 16px;
     animation: fadeInUp 2s ease-in-out;
 }
 
 .book-gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
     animation: fadeIn 2s ease-in-out;
@@ -40,7 +40,7 @@ header p {
 
 .book-item {
     background-color: white;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -57,29 +57,24 @@ header p {
 }
 
 .book-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .book-info {
     text-align: center;
-    margin-top : 15px;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .book-info h2 {
-    font-size: 20px;
-    margin: auto;
-    margin-left: -15px;
+    font-size: 18px;
     color: #3b5998;
 }
 
 .book-info p {
-    font-size: 16px;
+    font-size: 14px;
     color: #777;
-    
 }
 
-/* Animation */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -123,14 +118,50 @@ header p {
 }
 
 .book-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #3b5998;
     color: white;
-    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .book-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 12px;
+    }
+
+    .book-gallery {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .book-info h2 {
+        font-size: 16px;
+    }
+
+    .book-info p {
+        font-size: 12px;
+    }
 }
