@@ -12,27 +12,27 @@ body {
 
 header {
     text-align: center;
-    padding: 20px 0;
+    padding: 50px 0;
     background-color: #355070;
     color: antiquewhite;
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 10px;
     animation: fadeInDown 2s ease-in-out;
 }
 
 header p {
-    font-size: 16px;
+    font-size: 18px;
     animation: fadeInUp 2s ease-in-out;
 }
 
 .book-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
     max-width: 1200px;
     margin: 0 auto;
     animation: fadeIn 2s ease-in-out;
@@ -40,7 +40,7 @@ header p {
 
 .book-item {
     background-color: white;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -57,21 +57,24 @@ header p {
 }
 
 .book-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .book-info {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .book-info h2 {
-    font-size: 18px;
+    font-size: 20px;
+    margin: auto;
+    margin-left: -15px;
     color: #3b5998;
 }
 
 .book-info p {
-    font-size: 14px;
+    font-size: 16px;
     color: #777;
 }
 
@@ -118,38 +121,40 @@ header p {
 }
 
 .book-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     background-color: #3b5998;
     color: white;
+    margin-top: 50px;
 }
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 30px;
+        font-size: 36px;
     }
 
     header p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .book-gallery {
         grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     header p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .book-gallery {
@@ -158,10 +163,10 @@ footer {
     }
 
     .book-info h2 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .book-info p {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
